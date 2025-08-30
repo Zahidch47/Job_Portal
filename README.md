@@ -4,6 +4,7 @@
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react&logoColor=61dafb)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![CORS](https://img.shields.io/badge/CORS-enabled-blue?style=for-the-badge)
 ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
@@ -25,16 +26,15 @@ The project ensures a smooth and secure recruitment workflow with modern technol
 - 👥 **User roles**: Job Seekers & Employers  
 - 📝 **Job posting & management** (CRUD operations)  
 - 🔎 **Advanced job search** with filters (skills, title, location, salary)  
-- 📄 **Resume & profile uploads** with Cloudinary  
-- 📊 **Employer dashboard** to view and manage applicants  
-- 📱 **Responsive UI** with React + shadcn/ui  
+- 📄 **Resume & profile uploads** with Cloudinary    
+- 🎨 **Modern responsive UI** with TailwindCSS + shadcn/ui  
 - ⚡ REST API powered by **Express.js & MongoDB**  
 - 🌍 **CORS-enabled backend** for safe cross-origin access  
 
 ---
 
 ## 🚀 Tech Stack
-- **Frontend:** React.js, shadcn/ui, JavaScript  
+- **Frontend:** React.js, TailwindCSS, shadcn/ui, JavaScript  
 - **Backend:** Node.js, Express.js  
 - **Database:** MongoDB  
 - **Authentication:** bcrypt + JWT  
@@ -42,23 +42,3 @@ The project ensures a smooth and secure recruitment workflow with modern technol
 - **Others:** CORS, REST API  
 
 ---
-
-## 📸 Screenshots / Demo
-
-| Home Page | Job Listings | Dashboard |
-|-----------|--------------|-----------|
-| ![Home](./assets/home.png) | ![Jobs](./assets/jobs.png) | ![Dashboard](./assets/dashboard.png) |
-
-> 💡 Replace the image paths (`./assets/...`) with actual screenshot locations in your repo.  
-> You can also add a demo GIF like:  
-> `![Demo](./assets/demo.gif)`  
-
----
-
-## ⭐ Contributing
-Contributions are welcome! Please fork the repo and submit a pull request.  
-
----
-
-## 📜 License
-This project is licensed under the MIT License.  
