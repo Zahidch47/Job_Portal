@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOPtions = {
-    origin: "http://localhost:5173",
+    origin: "https://job-portal-1-3hyg.onrender.com",
     credentials:true
 }
 app.use(cors(corsOPtions));
