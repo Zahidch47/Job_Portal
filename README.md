@@ -42,3 +42,11 @@ The project ensures a smooth and secure recruitment workflow with modern technol
 - **Others:** CORS, REST API  
 
 ---
+
+## 🌐 Live Demo 
+🔗 **Render:** [Live Link](https://job-portal-1-3hyg.onrender.com)
+
+---
+
+## ⭐ Contributing
+Contributions are welcome! Please fork the repo and submit a pull request.
