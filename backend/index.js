@@ -22,9 +22,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-//  CORS setup (Frontend Render URL)
+//  CORS setup (Frontend Vercel URL)
 const corsOptions = {
-    origin: "https://subhendu-job-portal.vercel.app/", // frontend vercel link
+    origin: "https://subhendu-job-portal.vercel.app", // frontend vercel link
     credentials: true,
 };
 app.use(cors(corsOptions));
