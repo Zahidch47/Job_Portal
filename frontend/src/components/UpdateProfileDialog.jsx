@@ -60,6 +60,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
             if (res.data.success) {
                 dispatch(setUser(res.data.user));
                 toast.success(res.data.message);
+                setOpen(false);
             }
         } catch (error) {
             console.error(error);
@@ -74,7 +75,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
 
     return (
         <div>
-            <Dialog open={open}>
+            <Dialog open={open} onOpenChange={setOpen}>
                 <DialogContent className='sm:max-w-[425px]' onInteractOutside={() => setOpen(false)}>
                     <DialogHeader>
                         <DialogTitle>Update Profile</DialogTitle>
