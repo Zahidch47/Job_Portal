@@ -10,13 +10,19 @@ import { motion } from 'framer-motion';
 const Browse = () => {
   useGetAllJobs();
   const { allJobs } = useSelector(store => store.job);
+  const { savedJobs } = useSelector(state => state.bookmark); // saved jobs from redux
   const dispatch = useDispatch();
 
   useEffect(() => {
     return () => {
       dispatch(setSearchQuery(""));
     }
-  }, [])
+  }, []);
+
+  const sortedJobs = [
+    ...savedJobs,
+    ...allJobs.filter((job) => !savedJobs.some((j) => j._id === job._id)),
+  ];
 
   return (
     <div>
@@ -26,9 +32,8 @@ const Browse = () => {
           Search Results ({allJobs.length})
         </h1>
 
-        {/* Responsive Grid */}
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-          {allJobs.map((job) => (
+          {sortedJobs.map((job) => (
             <motion.div
               key={job._id}
               initial={{ opacity: 0, y: 40 }}
