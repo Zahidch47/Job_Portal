@@ -14,33 +14,33 @@ dotenv.config();
 
 const app = express();
 
-// ✅ Database connect
+//  Database connect
 connectDB();
 
-// ✅ Middlewares
+//  Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// ✅ CORS setup (Frontend Render URL)
+//  CORS setup (Frontend Render URL)
 const corsOptions = {
-    origin: "https://job-portal-1-3hyg.onrender.com", // frontend render link
+    origin: "https://subhendu-job-portal.vercel.app/", // frontend vercel link
     credentials: true,
 };
 app.use(cors(corsOptions));
 
-// ✅ Routes
+//  Routes
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
-// ✅ Default Route
+//  Default Route
 app.get("/", (req, res) => {
-    res.send("Job Portal API is running ✅");
+    res.send("Job Portal API is running ");
 });
 
-// ✅ Server listen
+//  Server listen
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
     console.log(`🚀 Server is running on port ${PORT}`);
