@@ -9,6 +9,7 @@ import { Button } from './ui/button'
 
 const Jobs = () => {
   const { allJobs, searchedQuery } = useSelector(store => store.job);
+  const { savedJobs } = useSelector(state => state.bookmark); 
   const [filterJobs, setFilterJobs] = useState(allJobs);
   const [showFilter, setShowFilter] = useState(false); // mobile filter state
 
@@ -26,6 +27,12 @@ const Jobs = () => {
       setFilterJobs(allJobs);
     }
   }, [allJobs, searchedQuery]);
+
+  // Merge savedJobs first, then others
+  const sortedJobs = [
+    ...savedJobs,
+    ...filterJobs.filter((job) => !savedJobs.some((j) => j._id === job._id)),
+  ];
 
   return (
     <div>
@@ -48,11 +55,11 @@ const Jobs = () => {
 
           {/* Job cards */}
           <div className="flex-1 h-[80vh] overflow-y-auto pb-5">
-            {filterJobs.length <= 0 ? (
+            {sortedJobs.length <= 0 ? (
               <span>No Jobs Found</span>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {filterJobs.map((job) => (
+                {sortedJobs.map((job) => (
                   <motion.div
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
